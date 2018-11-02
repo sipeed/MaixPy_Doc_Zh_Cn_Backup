@@ -21,7 +21,7 @@ import recommonmark
 
 # -- Project information -----------------------------------------------------
 
-project = u'荔枝丹 全流程指南'
+project = u'MaixPy 全流程指南'
 copyright = u'2018, Lichee'
 author = u'Lichee'
 
