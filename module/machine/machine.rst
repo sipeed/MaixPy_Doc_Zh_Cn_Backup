@@ -12,13 +12,13 @@ Fpioa
 
 创建fpioa对象，不需要传递参数。
 
-.. code-block:: code
+.. code-block:: bash
 
                 fpioa=machine.fpioa()
 
 映射引脚功能，第一个参数是引脚号，第二个参数是片上外设功能号，如下所示是将18号引脚设置为GOIOHS0，24对应GOIOHS0功能。
 
-.. code-block:: code
+.. code-block:: bash
 
                 fpioa.set_function(18,24)  
 
@@ -32,7 +32,7 @@ GPIO&&Pin
 创建gpio对象，第一个采纳数是GPIO号，对应使用的GPIO，第二个是参数的GPIO模式，一共包括，输入，上拉输入，下拉输入和输出分别对应0-3，第三个参数为GPIO口的值，当且仅当模式
 为输出时有效。
 
-.. code-block:: code
+.. code-block:: bash
 
                 gpio=machine.pin(0,0,0)
 
@@ -321,5 +321,4 @@ Spiflsah
 .. code-block:: code
 
                 spiflash.erase(0x100000)
-
 
