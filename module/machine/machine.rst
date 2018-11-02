@@ -12,7 +12,7 @@ Fpioa
 
 创建fpioa对象，不需要传递参数。
 
-.. code-block:: bash
+.. code-block:: bash 
 
                 fpioa=machine.fpioa()
 
@@ -38,19 +38,19 @@ GPIO&&Pin
 
 获取GPIO的值，当没有参数时，是直接获取GPIO的值，当传入参数时为设置GPIO口的值，当传入参数时为设置GPIO的值但无返回。
 
-.. code-block:: code
+.. code-block:: bash
 
                 value=gpio.value()  
 
 or
 
-.. code-block:: code
+.. code-block:: bash
 
                 gpio.value(1)
 
 还有一种设置GPIO值的方法，参数为GPIO口的值，作用是设置GPIO口的值并且返回GPIO口的当前值。如果不传入参数时，将会直接返回错误。
 
-.. code-block:: code
+.. code-block:: bash
 
                 value=gpio.toggle(1)
 
@@ -64,7 +64,7 @@ Timer
 
 创建定时器，如下所示为使用定时器0的0通道，关于定时器的相关信息，请从k210的 `datasheet  <http://pgeza64pd.bkt.clouddn.com/kendryte_datasheet_20180919020633.pdf>`_ 中了解。
 
-.. code-block:: code
+.. code-block:: bash
 
                 timer=machine.timer(0,0)
 
@@ -72,7 +72,7 @@ Timer
 
 需要注意的是，中断处理函数定义是需要传入定时器作为参数，不然将无法执行.当freq和period同时设置，freq的优先级更加高。当div为0时使用默认的分频系数，在使用该方法后定时器将自动开始运行。
 
-.. code-block:: code
+.. code-block:: bash
 
                 def func(timer):
                         print(test)
@@ -81,7 +81,7 @@ Timer
 
 设置定时器的中断函数。
 
-.. code-block:: code
+.. code-block:: bash
 
                 def func1(timer):
                         prrint(test1)
@@ -90,36 +90,36 @@ Timer
 
 设置定时器周期，如下所示，将timer的定时器周期设置为10000个计数。
 
-.. code-block:: code
+.. code-block:: bash
 
                 timer.period(10000)
                 
 设置定时器中断频率，如下所示，将timer的中断频率设置为50次每秒，这个值请尽量不要太大，有可能会出现错误。
 
-.. code-block:: code
+.. code-block:: bash
 
                 timer.freq(50)
 
 获取定时器当前计数值。
 
-.. code-block:: code
+.. code-block:: bash
 
                 timer.value()
 
 开始定时器。
 
-.. code-block:: code
+.. code-block:: bash
 
                 timer.start()
 
 停止定时器。
 
-.. code-block:: code
+.. code-block:: bash
 
                 timer.stop()
 重新开启定时器。
 
-.. code-block:: code
+.. code-block:: bash
 
                 timer.restar()
 
@@ -131,7 +131,7 @@ PWM
 在创建pwm对象之前，需要先将外部引脚映射为pwm输出，如下是将12号引脚映射为定时器0的第一个输出，MaixPy的启动已经默认将RGB灯的引脚映射到了定时器0的第一个到第三个
 输出。
 
-.. code-block:: code
+.. code-block:: bash
 
                 fpioa=machin.fpioa()
                 self.fpioa.set_function(12, 190)
@@ -142,23 +142,23 @@ PWM
 
 创建pwm对象后，pwm自动运行
 
-.. code-block:: code
+.. code-block:: bash
 
                 pwm=machine.pwm(0,0,2000000,90,12)
 
 初始化pwm，第1个参数为pwm频率，第2个为pwm占空比，第3个为输出外部引脚。
 
-.. code-block:: code
+.. code-block:: bash
 
                 pwm.init(3000000,30,12)
 设置pwm频率。
 
-.. code-block:: code
+.. code-block:: bash
 
                 pwm.freq(4000000)
 设置pwm占空比，如下所示为设置占空比为80%。
 
-.. code-block:: code
+.. code-block:: bash
 
                 pwm.duty(80)
 
@@ -168,20 +168,20 @@ Ov2640
 
 创建ov2640对象，当然在创建对象之前也需要初始化外部引脚，但引脚映射已经在开机时映射，这里我们值需要进行对象的操作即可。
 
-.. code-block:: code
+.. code-block:: bash
 
                 ov2640=machine.ov2640()
 
 初始化ov2640，在初始化之前，请确认摄像头已经安装在Sipeed M1上。如果检测不到摄像头将会进入检测死循环，MaxiPy的驱动将初始化ov2640为320*240分辨率，对应于默认的lcd分辨率大小。
 
-.. code-block:: code
+.. code-block:: bash
 
                 ov2640.init()
 
 
 获取摄像头图像，在获取摄像头图像之前需要创建缓冲区来获取图像数据，获取图像之后可以配合lcd进行显示。
 
-.. code-block:: code
+.. code-block:: bash
 
                 image=bytearray(320*240*2)
                 ov2640.get_image(image)
@@ -193,25 +193,25 @@ St7789
 
 创建st7789对象，同理，引脚映射已经在开机时完成。
 
-.. code-block:: code
+.. code-block:: bash
 
                 st7789=machine.st7789()
 
 初始化st7789。
 
-.. code-block:: code
+.. code-block:: bash
 
                 st7789.init()
 
 按照默认默认分辨率进行画图，参数为320*240*2字节大小的图像数据。
 
-.. code-block:: code
+.. code-block:: bash
 
                 st7789.draw_picture_default(buf)
 
 可以配合ov2640进行图像显示。
 
-.. code-block:: code 
+.. code-block:: bash 
 
                 image=bytearray(320*240*2)
                 while(1):
@@ -220,13 +220,13 @@ St7789
                         
 使用st7789进行画图，第一个参数为为开始画图的x坐标，第二个参数为为开始画图的y坐标，第三个参数为图像的宽度像素，第四个参数为图像的高度像素，第五个参数是图像数据缓冲。
 
-.. code-block:: code
+.. code-block:: bash
 
                 st7789.draw_picture(0,0,320,240,buf)
 
 使用st7789进行画字符串，第一个参数为开始画字符串的x坐标，第二个参数为开始画字符串的y坐标，第三个参数为字符串。
 
-.. code-block:: code
+.. code-block:: bash
 
                 st7789.draw_string(0,0,"hello world")
 
@@ -237,7 +237,7 @@ Ws2812
 
 创建ws2812对象
 
-.. code-block:: code
+.. code-block:: bash
 
                 ws2812=machine.ws2812()
 
@@ -247,7 +247,7 @@ ws2812需要使用GPIOHS来进行数据通信，所以在使用ws2812前，我�
 
 ws2812初始化的第一个参数是使用的GPIOHS号，第二参数为使用的外部引脚。
 
-.. code-block:: code
+.. code-block:: bash
 
                 fpioa=machine.fpioa()
                 fpioa.set_function(20,44)
@@ -257,7 +257,7 @@ ws2812点亮单独一个灯。
 
 参数分别为R、G、B分量，每个分量最大值为255。
 
-.. code-block:: code
+.. code-block:: bash
         
                 ws2812.set_RGB(255,255,255)
 
@@ -265,7 +265,7 @@ ws2812点亮多个灯。
 
 与set_RGB相似，多了最后一个参数，这个参数亮灯的数量。
 
-.. code-block:: code
+.. code-block:: bash
 
                 ws2812.set_RGB_num(255,255,255,4)
 
@@ -277,7 +277,7 @@ Zmodem
 
 通过使用以下命令来获取PC机文件。
 
-.. code-block:: code
+.. code-block:: bash
 
                 machine.zmodem.rz()
 
@@ -288,13 +288,13 @@ Spiflsah
 
 创建spiflash对象。
 
-.. code-block:: code
+.. code-block:: bash
 
                 spiflash=machine.spiflash()     
 
 初始化flash。
 
-.. code-block:: code
+.. code-block:: bash
 
                 spiflash.init()
 
@@ -302,7 +302,7 @@ Spiflsah
 
 如下所示，先创建一个存放读取数据的缓冲区，然后使用read方法将读取的数据存放于buf中。
 
-.. code-block:: code
+.. code-block:: bash
 
                 buf=bytearray(320)
                 spiflash.read(0x100000,buf)
@@ -311,14 +311,14 @@ Spiflsah
 
 如下所示，先创建一个存放写入数据的缓冲区，然后使用write方法将buf中的数据写入flash中。
 
-.. code-block:: code
+.. code-block:: bash
 
                 buf=bytearray(320)
                 spiflash.write(0x100000,buf)
 
 擦除flash，参数为擦写地址，每次擦写按照4k来擦写。
 
-.. code-block:: code
+.. code-block:: bash
 
                 spiflash.erase(0x100000)
 
