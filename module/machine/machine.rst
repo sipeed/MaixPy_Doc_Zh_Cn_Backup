@@ -54,9 +54,6 @@ or
 
                 value=gpio.toggle(1)
 
-Uart
--------
-
 Timer
 -------
 
