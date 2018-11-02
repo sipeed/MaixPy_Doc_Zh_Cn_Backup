@@ -114,6 +114,7 @@ Timer
 .. code-block:: bash
 
                 timer.stop()
+
 重新开启定时器。
 
 .. code-block:: bash
@@ -148,11 +149,13 @@ PWM
 .. code-block:: bash
 
                 pwm.init(3000000,30,12)
+
 设置pwm频率。
 
 .. code-block:: bash
 
                 pwm.freq(4000000)
+
 设置pwm占空比，如下所示为设置占空比为80%。
 
 .. code-block:: bash

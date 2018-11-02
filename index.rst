@@ -27,7 +27,8 @@ MaixPy是基于Sipeed M1平台适配的开源MicroPython项目，支持Sipeed M1
 
 .. toctree::
    :maxdepth: 2
-   
+  
+   固件下载 <firmware.rst>
    开机启动 <module/boot.rst>
    machine模块 </module/machine/machine.rst>
    uos模块 </module/uos/uos.rst>
