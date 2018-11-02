@@ -36,6 +36,6 @@ MaixPy是基于Sipeed M1平台适配的开源MicroPython项目，支持Sipeed M1
 
 
 
-MaixPy仍在不断地成长、不断完善，对于API接口，软件bug，文档编写等你有更多更好的建议，我们欢迎您到 `Sipeed M1 | 建议与讨论区 <http://bbs.lichee.pro/t/dan>`_ 提出您宝贵的建议。
+MaixPy仍在不断地成长、不断完善，对于API接口，软件bug，文档编写等你有更多更好的建议，我们欢迎您到 `Sipeed M1 | 建议与讨论区 <http://bbs.lichee.pro/t/sipeed-m1>`_ 提出您宝贵的建议。
  
 同时欢迎各位加入 `荔枝派交流群826307240 <https://jq.qq.com/?_wv=1027&k=5uWO21P>`_ | `荔枝派Telegram电报群 <https://t.me/sipeed>`_ 与众多开发者、爱好者即时交流。
