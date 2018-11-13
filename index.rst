@@ -33,6 +33,7 @@ MaixPy是基于Sipeed M1平台适配的开源MicroPython项目，支持Sipeed M1
    machine模块 </module/machine/machine.rst>
    uos模块 </module/uos/uos.rst>
    app模块 </module/app/app.rst>
+   usocket模块 </module/usocket/usocket.rst>
 
 
 
