@@ -8,14 +8,14 @@ vi
 
 ``vi`` 是一款终端编辑软件，可以通过终端对开发板中的文件进行编辑。
 
-.. code-block:: code
+.. code-block:: bash
 
                 import app
                 app.vi(fileName)
 
 有了vi，我们能够直接在Sipeed M1开发板上直接编写脚本执行，如下所示。
 
-.. code-block:: code
+.. code-block:: bash 
                 
                 app.vi(“/test.py”)
                 ....#编辑test.py

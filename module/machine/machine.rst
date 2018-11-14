@@ -8,11 +8,11 @@ machine模块介绍
 Fpioa
 -----
 
-``fpioa`` 主要用于映射k210芯片的功能到外部引脚，引脚功能映射表可以查看sdk中的 ``fpioa.h`` 查看。该模块只负责设置引脚功能，一般用于在外设初始化之前使用。
+``fpioa`` 主要用于映射k210芯片的功能到外部引脚。该模块只负责设置引脚功能，一般用于在外设初始化之前使用。
 
 创建fpioa对象，不需要传递参数。
 
-.. code-block:: bash 
+.. code-block:: bash
 
                 fpioa=machine.fpioa()
 
@@ -22,8 +22,6 @@ Fpioa
 
                 fpioa.set_function(18,24)  
 
-
-
 GPIO&&Pin
 ------------
 
@@ -32,19 +30,19 @@ GPIO&&Pin
 创建gpio对象，第一个采纳数是GPIO号，对应使用的GPIO，第二个是参数的GPIO模式，一共包括，输入，上拉输入，下拉输入和输出分别对应0-3，第三个参数为GPIO口的值，当且仅当模式
 为输出时有效。
 
-.. code-block:: bash
+.. code-block:: bash 
 
                 gpio=machine.pin(0,0,0)
 
 获取GPIO的值，当没有参数时，是直接获取GPIO的值，当传入参数时为设置GPIO口的值，当传入参数时为设置GPIO的值但无返回。
 
-.. code-block:: bash
+.. code-block:: bash 
 
                 value=gpio.value()  
 
 or
 
-.. code-block:: bash
+.. code-block:: bash 
 
                 gpio.value(1)
 
@@ -132,7 +130,7 @@ PWM
 .. code-block:: bash
 
                 fpioa=machin.fpioa()
-                self.fpioa.set_function(12, 190)
+                fpioa.set_function(12, 190)
 
 创建PWM对象，第一个参数为使用的定时器，第二个参数为使用的定时器通道，第三个参数为pwm频率，第四个为pwm占空比，第五个为输出外部引脚。
 

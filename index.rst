@@ -1,7 +1,7 @@
 MaixPy 全流程指南
 =================================================
 
-MaixPy是基于Sipeed M1平台适配的开源MicroPython项目，支持Sipeed M1上的多种外设，旨在让编程更加简单，本章节将详细介绍MaixPy接口的使用方法。
+MaixPy是基于Sipeed M1平台适配的开源MicroPython项目，支持Sipeed M1上的多种外设，旨在让各位小白和用户更加简单地使用Sipeed M1。
 
 .. figure:: http://pgeza64pd.bkt.clouddn.com/dan-board.jpg
   :width: 500px
@@ -9,8 +9,7 @@ MaixPy是基于Sipeed M1平台适配的开源MicroPython项目，支持Sipeed M1
   
   Sipeed M1
  
-
-关于Sipeed M1的资料请移步 `Sipeed M1  <http://dan.lichee.pro/index.html>`_ 了解。
+Sipeed M1强大的性能这里就不多说了，详情请移步 `Sipeed M1  <http://dan.lichee.pro/index.html>`_ 了解
 
 关于MaixPy的介绍和下载请移步 `MaixPy-github <https://github.com/sipeed/MaixPy>`_  阅读README.md了解。
 
@@ -19,7 +18,7 @@ MaixPy是基于Sipeed M1平台适配的开源MicroPython项目，支持Sipeed M1
 前言
 -----
 
-本文所述将假设您已经阅读了github上面的sdk介绍和Lichee Dan的wiki，并且已经有了一定的python知识基础，但我们仍然会尽量解释好MaixPy接口的细节。MaixPy的API将会持续更新，请关注我们的github或者该教程以获取最新的API介绍。本教程MaixPy主要介绍Sipeed M1平台相关的模块machine、uos和app。
+关于MaixPy固件编译和烧录可以阅读 `编译步骤 <https://github.com/sipeed/MaixPy>`_ 和 `烧录步骤 <http://dan.lichee.pro/>`_ 来了解 。本文致力于说明MaixPy的入门教程和使用方法。MaixPy的API将会持续更新，请关注我们的github或者该文档以获取最新的API介绍。那么就让我们开始板子的吃灰之旅吧！
 
 章节目录
 --------
@@ -28,12 +27,8 @@ MaixPy是基于Sipeed M1平台适配的开源MicroPython项目，支持Sipeed M1
 .. toctree::
    :maxdepth: 2
   
-   固件下载 <firmware.rst>
-   开机启动 <module/boot.rst>
-   machine模块 </module/machine/machine.rst>
-   uos模块 </module/uos/uos.rst>
-   app模块 </module/app/app.rst>
-   usocket模块 </module/usocket/usocket.rst>
+   开箱教程<start/start.rst>	
+   模块说明<module/module.rst>
 
 
 

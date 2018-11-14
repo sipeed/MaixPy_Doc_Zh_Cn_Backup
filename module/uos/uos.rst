@@ -7,7 +7,7 @@ uos模块介绍
 
 格式化spiffs。
 
-.. code-block:: code
+:: 
 
                 uos.formatfs()
 
