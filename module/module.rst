@@ -8,6 +8,7 @@
 .. toctree::
    :maxdepth: 2
   
+   内置类<class/class.rst>
    machine模块 <machine/machine.rst>
    uos模块 <uos/uos.rst>
    app模块 <app/app.rst>
