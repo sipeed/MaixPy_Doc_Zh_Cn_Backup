@@ -366,8 +366,8 @@ ws2812初始化的第一个参数是使用的 **GPIOHS号** ，第二参数为�
 .. code-block:: bash
 
                 fpioa=machine.fpioa()
-                fpioa.set_function(board_info.GPIO9,fpioa.GPIOHS9)
-                ws2812.init(board_info.GPIO9,fpioa.GPIOHS9)
+                fpioa.set_function(board_info.PIN9,fpioa.GPIOHS9)
+                ws2812.init(board_info.PIN9,fpioa.GPIOHS9)
 
 ws2812点亮单独一个灯。
 
