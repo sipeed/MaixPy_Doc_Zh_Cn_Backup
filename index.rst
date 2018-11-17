@@ -18,7 +18,7 @@ Sipeed M1强大的性能这里就不多说了，详情请移步 `Sipeed M1  <htt
 前言
 -----
 
-关于MaixPy固件编译和烧录可以阅读 `编译步骤 <https://github.com/sipeed/MaixPy>`_ 和 `烧录步骤 <http://dan.lichee.pro/>`_ 来了解 。本文致力于说明MaixPy的入门教程和使用方法。MaixPy的API将会持续更新，请关注我们的github或者该文档以获取最新的API介绍。那么就让我们开始板子的吃灰之旅吧！
+关于MaixPy固件编译和烧录可以阅读 `编译步骤 <https://github.com/sipeed/MaixPy>`_ 和 `烧录步骤 <http://dan.lichee.pro/>`_ 来了解 。本文致力于说明MaixPy的入门教程和使用方法。MaixPy的API将会持续更新，请关注我们的github或者该文档以获取最新的API介绍。那么就让我们开始板子的探索之旅吧！
 
 章节目录
 --------
@@ -28,7 +28,7 @@ Sipeed M1强大的性能这里就不多说了，详情请移步 `Sipeed M1  <htt
    :maxdepth: 2
   
    开箱教程<start/start.rst>	
-   模块说明<module/module.rst>
+   探索MaixPy<exploreMaixPy/exploreMaixPy.rst>
 
 
 
