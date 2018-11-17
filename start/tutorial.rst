@@ -34,7 +34,7 @@
 
 	>>> fpioa=machine.fpioa()
 	>>> fpioa.set_function(board_info.LED_G,fpioa.GPIO0)
-	>>> pin=machine.pin(machine.pin.GPIO0,machine.pin.DM_OUTPUT,machine.pin.HIGH_LEVEL)
+	>>> pin=machine.pin(machine.GPIO.GPIO0,machine.GPIO.DM_OUTPUT,machine.GPIO.HIGH_LEVEL)
 
 接着我们就可以直接使用一句话来点亮我们的灯啦，这句话就是拉低引脚电平从而点亮开发板的灯。输入之后你会发现板子上绿色的灯亮起来了
 
