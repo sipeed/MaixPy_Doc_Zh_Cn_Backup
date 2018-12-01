@@ -121,7 +121,7 @@ Timer
 
 .. code-block:: bash
 
-                timer=machine.timer(machine.timer.TIMER0,machine.timer.CHANEEL0)
+                timer=machine.timer(machine.timer.TIMER0,machine.timer.CHANNEL0)
 
 初始化定时器，第一个参数 **freq** 为1秒内中断的次数，第二个为定时器的周期 **period** ，第三个为定时器的分频系数 **div** ，第四个为定时器的中断处理函数 **callback** 。
 
